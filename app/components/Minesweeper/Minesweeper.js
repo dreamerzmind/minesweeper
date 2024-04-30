@@ -6,6 +6,7 @@ import { createBoard } from "./helpers";
 import classNames from "classnames";
 
 export const clearZeros = (board, row, column) => {
+  // fix infinite calls
   const prevX = board[row]?.[column - 1];
   const nextX = board[row]?.[column + 1];
   const prevY = board[row - 1]?.[column];
